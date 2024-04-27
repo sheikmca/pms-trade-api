@@ -4,4 +4,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PositionRepository extends JpaRepository<PositionEntity, String> {
     // You can add custom query methods here if needed
+
+    List<PositionEntity> findByTransactionRef(String transactionRef);
+
+    
 }
