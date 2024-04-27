@@ -17,7 +17,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     Page<User> findAll(Pageable pageable);
 
-    User findByUserEmail(String userEmail);
+    User findByEmail(String email);
 
 
     @Query(nativeQuery = true, value = "SELECT u.* FROM users u where u.credentialId = :credentialId  ")
