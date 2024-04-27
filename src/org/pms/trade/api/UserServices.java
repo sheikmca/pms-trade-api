@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/UserServices")
 public interface UserServices {
 
-    @PostMapping(path = "/verifyUser", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/verifyUser")
     @Operation(summary = "verifyUser", description = "")
     public Boolean verifyUser(
             @RequestHeader("email") String email, @RequestHeader("password") String password);
