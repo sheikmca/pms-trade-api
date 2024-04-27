@@ -1,13 +1,12 @@
-package org.pms.trade.entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
 public class PositionService {
-   private final PositionRepository positionRepository;
+
+    private final PositionRepository positionRepository;
 
     @Autowired
     public PositionService(PositionRepository positionRepository) {
@@ -29,6 +28,4 @@ public class PositionService {
     public void deletePositionById(String id) {
         positionRepository.deleteById(id);
     }
-
-  
 }
