@@ -6,6 +6,8 @@ import org.pms.trade.entity.PositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service("PositionServicesImpl")
 public class PositionServicesImpl implements PositionServices {
 
@@ -19,6 +21,7 @@ public class PositionServicesImpl implements PositionServices {
         PositionEntity positionEntity = new PositionEntity();
 
         try {
+            positionEntity.setId(UUID.randomUUID().toString());
             positionEntity.setTransaction_ref(transactionRef);
             positionEntity.setInstrument_Id(instrumentId);
             positionEntity.setTrade_type(tradeType);
