@@ -8,16 +8,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-import java.math.BigDecimal;
-
 @Entity
 @Table(name = "users")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Users {
+public class User {
     @Id
     private String email;
     private String name;
