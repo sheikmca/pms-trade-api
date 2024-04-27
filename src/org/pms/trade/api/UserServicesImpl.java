@@ -13,12 +13,15 @@ public class UserServicesImpl implements UserServices {
     @Override
     public Boolean verifyUser(String email, String password) {
         Boolean ret = false;
+        try {
+            var user = usersService.findByEmail(email);
 
-        var user = usersService.findByEmail(email);
 
-
-        if (user != null && user.getPassword().equals(password)) {
-            ret = true;
+            if (user != null && user.getPassword().equals(password)) {
+                ret = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return ret;
