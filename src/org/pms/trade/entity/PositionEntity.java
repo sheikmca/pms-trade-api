@@ -25,7 +25,5 @@ public class PositionEntity {
     private String instrument_Id;
     private String trade_type;
     private Integer unit;
-    private Double trade_value;
-
 
 }
