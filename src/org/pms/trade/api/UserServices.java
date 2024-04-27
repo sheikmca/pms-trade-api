@@ -18,7 +18,7 @@ public interface UserServices {
     @PostMapping(path = "/verifyUser", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "verifyUser", description = "")
     public Boolean verifyUser(
-            @RequestHeader("email") String apiAccessCode, @RequestHeader("password") String assetSeria);
+            @RequestHeader("email") String email, @RequestHeader("password") String password);
 
 
 }
