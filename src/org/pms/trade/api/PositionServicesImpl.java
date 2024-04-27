@@ -34,4 +34,8 @@ public class PositionServicesImpl implements PositionServices {
 
         return ret;
     }
+
+    public List<PositionEntity> getAllPositions() {
+        return positionRepository.findAll();
+    }
 }
