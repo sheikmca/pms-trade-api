@@ -1,31 +1,26 @@
 package org.pms.trade.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-
-import java.math.BigDecimal;
-
 @Entity
-@Table(name = "portfolio")
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "portfolio")
 public class PortfolioEntity {
     @Id
-    private String id;
-    private String portfolio_number;
-    private String invest_strategy;
-    private Double current_performace;
-    private BigDecimal portfolio_value;
-    private String customer_name;
-    private String customer_id;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "portfolio_number")
+    private String portfolioNumber;
+    @Column(name = "invest_strategy")
+    private String investStrategy;
+    @Column(name = "current_performance")
+    private double currentPerformance;
+    @Column(name = "customer_id")
+    private String customerId;
+    @Column(name = "customer_name")
+    private String customerName;
+    @Column(name = "portfolio_value")
+    private int portfolioValue;
 }
